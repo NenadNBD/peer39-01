@@ -5,6 +5,7 @@ const hubspot = require('@hubspot/api-client');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 
+const app = express();
 const hubspotClient = new hubspot.Client({ accessToken: process.env.HUBSPOT_ACCESS_TOKEN });
 app.use(express.urlencoded());
 app.use(cookieParser());
